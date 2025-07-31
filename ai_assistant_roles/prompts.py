@@ -21,10 +21,7 @@ def load_prompt(role: str, prompts_dir: Optional[Path] = None) -> str:
         prompts_dir = Path(__file__).parent.parent / "roles"
     
     # Handle both flat names and paths with subdirectories
-    if "/" in role:
-        prompt_file = prompts_dir / f"{role}.md"
-    else:
-        prompt_file = prompts_dir / f"{role}.md"
+    prompt_file = prompts_dir / f"{role}.md"
     
     if not prompt_file.exists():
         raise FileNotFoundError(f"Prompt not found: {role}")

@@ -1,6 +1,6 @@
 [project]
 name = "ai-assistant-roles"
-version = "0.0.2"
+version = "1.0.0"
 description = "AI Assistant Roles - Python service with AI capabilities"
 authors = [{name="Leopoldo Garcia Vargas", email="lk13.dev@gmail.com"}]
 requires-python = ">=3.12"
