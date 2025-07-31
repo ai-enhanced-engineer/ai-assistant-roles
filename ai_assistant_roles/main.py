@@ -1,9 +1,9 @@
-"""Main module for AI Base Template service"""
+"""Main module for AI Assistant Roles service"""
 
 
 def hello_world() -> str:
     """Simple function to test the package."""
-    return "Hello from AI Base Template!"
+    return "Hello from AI Assistant Roles!"
 
 
 def get_version() -> str:
