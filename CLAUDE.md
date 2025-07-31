@@ -10,12 +10,12 @@ ai-assistant-roles/
 │   ├── __init__.py
 │   ├── prompts.py       # Prompt loading utilities
 │   └── roles/           # AI role prompt definitions
-│       ├── engineering/  # Engineering-focused roles
-│       │   ├── software-engineer.md
-│       │   ├── backend-engineer.md
-│       │   ├── software-architect.md
-│       │   └── systems-architect.md
-│       └── other-domains/  # Other domain roles
+│       ├── business/    # Business-focused roles
+│       ├── data/        # Data science roles
+│       ├── design/      # Design roles
+│       ├── engineering/ # Software engineering roles
+│       ├── research/    # Research roles
+│       └── writing/     # Writing roles
 ├── tests/               # Test suite
 ├── Makefile            # Development automation
 └── pyproject.toml      # Project config & dependencies
@@ -71,14 +71,6 @@ make all-test           # Run all tests with coverage
 - **pytest**: Testing framework
 - **uv**: Fast Python package manager
 
-## ML/Data Science Stack
-
-- **scikit-learn**: Machine learning library
-- **XGBoost/LightGBM**: Gradient boosting frameworks
-- **PyTorch**: Deep learning framework
-- **pandas/numpy**: Data manipulation
-- **SHAP**: Model interpretability
-
 ## Best Practices
 
 - Type hints on all functions
@@ -97,7 +89,7 @@ When creating a new AI assistant role prompt, follow this consistent structure:
 #### 1. File Naming
 - Use kebab-case for file names (e.g., `software-architect.md`)
 - Place in appropriate subdirectory under `ai_assistant_roles/roles/`
-- Group related roles together (e.g., engineering, data-science, business)
+- Group related roles together (e.g., engineering, data, business, design, research, writing)
 
 #### 2. Prompt Structure
 

@@ -5,7 +5,7 @@ A comprehensive collection of AI assistant personality prompts organized by doma
 ## What is this?
 
 This project provides:
-- **23+ carefully crafted AI assistant prompts** across multiple domains
+- **23 carefully crafted AI assistant prompts** across multiple domains
 - Simple Python API for programmatic access
 - Git-based version control for prompt evolution
 - Easy-to-edit Markdown format
@@ -50,64 +50,11 @@ This project provides:
 
 ## Quick Start
 
-### 1. Browse Available Roles
+1. **Browse the roles** in the `ai_assistant_roles/roles/` directory
+2. **Copy the content** of any role you need  
+3. **Paste it** as a system prompt in your AI assistant (ChatGPT, Claude, etc.)
 
-Explore the organized role structure:
-```
-ai_assistant_roles/roles/
-├── business/
-│   └── product-manager.md
-├── data/
-│   ├── data-analyst.md
-│   └── data-scientist.md
-├── design/
-│   └── ux-designer.md
-├── engineering/
-│   ├── ai-engineer.md
-│   ├── ai-product-engineer.md
-│   ├── backend-engineer.md
-│   ├── code-reviewer.md
-│   ├── devops-engineer.md
-│   ├── frontend-engineer.md
-│   ├── qa-tester.md
-│   ├── software-architect.md
-│   ├── software-engineer.md
-│   └── systems-architect.md
-├── research/
-│   ├── deep-learning-researcher.md
-│   ├── language-model-expert.md
-│   ├── multimodal-researcher.md
-│   ├── novel-techniques-researcher.md
-│   ├── research-engineer.md
-│   └── statistical-ml-researcher.md
-└── writing/
-    ├── introspection-writer.md
-    ├── linkedin-writer.md
-    └── writing-assistant.md
-```
-
-### 2. Use in Python
-
-```python
-from ai_assistant_roles.prompts import load_prompt, list_prompts
-
-# List all available roles
-roles = list_prompts()
-print(f"Available roles: {len(roles)}")
-# Output: Available roles: 23
-
-# Load a specific prompt
-prompt = load_prompt('engineering/software-architect')
-print(prompt[:100] + "...")
-
-# Load from subdirectories
-data_scientist = load_prompt('data/data-scientist')
-ux_designer = load_prompt('design/ux-designer')
-```
-
-### 3. Use Directly
-
-Simply copy the content from any `.md` file in the `ai_assistant_roles/roles/` directory and paste it as a system prompt in your AI assistant (ChatGPT, Claude, etc.).
+That's it! The roles are organized by domain (engineering, research, data, etc.) for easy navigation.
 
 ## Project Structure
 
@@ -131,129 +78,20 @@ ai-assistant-roles/
 
 ## Python API
 
-### Functions
-
-- `load_prompt(role: str) -> str`: Load a prompt by role name (supports subdirectories)
-- `list_prompts() -> list[str]`: List all available roles with their paths
-- `prompt_exists(role: str) -> bool`: Check if a role exists
-
-### Example: Integration with AI APIs
-
-```python
-from ai_assistant_roles.prompts import load_prompt
-import openai
-
-# Load a specialized role
-prompt = load_prompt('engineering/ai-engineer')
-
-# Use with OpenAI
-response = openai.ChatCompletion.create(
-    model="gpt-4",
-    messages=[
-        {"role": "system", "content": prompt},
-        {"role": "user", "content": "Help me design a recommendation system"}
-    ]
-)
-
-# Or with Anthropic Claude
-import anthropic
-claude = anthropic.Client()
-response = claude.messages.create(
-    model="claude-3-opus-20240229",
-    system=prompt,
-    messages=[{"role": "user", "content": "Help me design a recommendation system"}]
-)
-```
+A simple Python API is available for programmatic access:
+- `load_prompt(role)` - Load a prompt by role name
+- `list_prompts()` - List all available roles
+- `prompt_exists(role)` - Check if a role exists
 
 ## Adding New Roles
 
-1. Choose the appropriate subdirectory under `ai_assistant_roles/roles/`
-2. Create a new `.md` file using kebab-case (e.g., `ml-engineer.md`)
-3. Follow the consistent structure:
-
-```markdown
-# Role Name
-
-Brief description of the role's expertise and experience level.
-
-## Core Expertise
-- List 6-8 key areas of expertise
-- Be specific about technologies and methodologies
-- Include both technical and strategic capabilities
-
-## Communication Style
-- Define how the assistant should communicate
-- Include tone, approach, and focus areas
-- Specify how to handle different audiences
-
-## When Providing Solutions
-1. Step-by-step approach the assistant should follow
-2. Usually 6-8 numbered steps
-3. Include analysis, implementation, and validation
-
-## Key Principles
-- Core principles that guide the role
-- Include best practices and philosophies
-- Balance idealism with pragmatism
-```
-
 See [CLAUDE.md](CLAUDE.md) for detailed guidelines on creating new role prompts.
-
-## Development
-
-### Setup Environment
-
-```bash
-# Create Python 3.12 environment
-make environment-create
-
-# Sync dependencies
-make environment-sync
-```
-
-### Testing
-
-```bash
-# Run all tests with coverage
-make all-test
-
-# Run specific test types
-make unit-test
-make functional-test
-
-# Validate before committing
-make validate-branch
-```
-
-### Code Quality
-
-```bash
-# Format code
-make format
-
-# Lint and type check
-make lint
-make type-check
-```
-
-## Versioning
-
-This project uses semantic versioning. Version is managed in `pyproject.toml`.
-
-```bash
-# View current version
-grep version pyproject.toml
-
-# Version is updated automatically via CI/CD
-```
 
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Add new roles following the guidelines
-4. Ensure tests pass: `make validate-branch`
-5. Submit a pull request
+2. Add new roles following the guidelines in [CLAUDE.md](CLAUDE.md)
+3. Submit a pull request
 
 ## License
 
