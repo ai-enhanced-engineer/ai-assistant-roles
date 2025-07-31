@@ -17,8 +17,8 @@ def load_prompt(role: str, prompts_dir: Optional[Path] = None) -> str:
         FileNotFoundError: If the prompt file doesn't exist
     """
     if prompts_dir is None:
-        # Default to roles directory relative to project root
-        prompts_dir = Path(__file__).parent.parent / "roles"
+        # Default to roles directory in the same package
+        prompts_dir = Path(__file__).parent / "roles"
     
     # Handle both flat names and paths with subdirectories
     prompt_file = prompts_dir / f"{role}.md"
@@ -39,7 +39,7 @@ def list_prompts(prompts_dir: Optional[Path] = None) -> list[str]:
         List of available role names (without .md extension)
     """
     if prompts_dir is None:
-        prompts_dir = Path(__file__).parent.parent / "roles"
+        prompts_dir = Path(__file__).parent / "roles"
     
     if not prompts_dir.exists():
         return []
@@ -66,7 +66,7 @@ def prompt_exists(role: str, prompts_dir: Optional[Path] = None) -> bool:
         True if the prompt exists, False otherwise
     """
     if prompts_dir is None:
-        prompts_dir = Path(__file__).parent.parent / "roles"
+        prompts_dir = Path(__file__).parent / "roles"
     
     prompt_file = prompts_dir / f"{role}.md"
     return prompt_file.exists()

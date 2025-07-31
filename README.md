@@ -14,7 +14,7 @@ This project provides:
 
 ### 1. Browse Available Roles
 
-Check the `roles/` directory to see available roles:
+Check the `ai_assistant_roles/roles/` directory to see available roles:
 - `backend-engineer.md` - Backend development expertise
 - `data-scientist.md` - Data science and ML focus
 - `code-reviewer.md` - Code review specialist
@@ -35,25 +35,25 @@ print(prompt)
 
 ### 3. Use Directly
 
-Simply read the markdown files in `roles/` directory and copy the content to your AI assistant.
+Simply read the markdown files in `ai_assistant_roles/roles/` directory and copy the content to your AI assistant.
 
 ## Project Structure
 
 ```
 ai-assistant-roles/
-├── roles/                  # Role definitions
-│   ├── backend-engineer.md
-│   ├── data-scientist.md
-│   └── code-reviewer.md
 ├── ai_assistant_roles/      # Python package
 │   ├── __init__.py
-│   └── prompts.py          # Role loading utilities
+│   ├── prompts.py          # Role loading utilities
+│   └── roles/              # Role definitions
+│       ├── backend-engineer.md
+│       ├── data-scientist.md
+│       └── code-reviewer.md
 └── tests/                  # Test suite
 ```
 
 ## Adding New Roles
 
-1. Create a new `.md` file in the `roles/` directory
+1. Create a new `.md` file in the `ai_assistant_roles/roles/` directory
 2. Name it using kebab-case (e.g., `frontend-engineer.md`)
 3. Follow the existing format:
    ```markdown
@@ -127,7 +127,7 @@ make test
 
 ## Contributing
 
-1. Add new roles to `roles/` directory
+1. Add new roles to `ai_assistant_roles/roles/` directory
 2. Test loading with the Python API
 3. Update this README if needed
 4. Create a pull request

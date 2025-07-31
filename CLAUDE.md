@@ -6,16 +6,16 @@ A system for storing and managing AI assistant personality prompts. Each prompt 
 
 ```
 ai-assistant-roles/
-├── prompts/              # AI role prompt definitions
-│   ├── engineering/      # Engineering-focused roles
-│   │   ├── software-engineer.md
-│   │   ├── backend-engineer.md
-│   │   ├── software-architect.md
-│   │   └── systems-architect.md
-│   └── other-domains/    # Other domain roles
 ├── ai_assistant_roles/   # Python package
 │   ├── __init__.py
-│   └── main.py          # Prompt loading utilities
+│   ├── prompts.py       # Prompt loading utilities
+│   └── roles/           # AI role prompt definitions
+│       ├── engineering/  # Engineering-focused roles
+│       │   ├── software-engineer.md
+│       │   ├── backend-engineer.md
+│       │   ├── software-architect.md
+│       │   └── systems-architect.md
+│       └── other-domains/  # Other domain roles
 ├── tests/               # Test suite
 ├── Makefile            # Development automation
 └── pyproject.toml      # Project config & dependencies
@@ -96,7 +96,7 @@ When creating a new AI assistant role prompt, follow this consistent structure:
 
 #### 1. File Naming
 - Use kebab-case for file names (e.g., `software-architect.md`)
-- Place in appropriate subdirectory under `prompts/`
+- Place in appropriate subdirectory under `ai_assistant_roles/roles/`
 - Group related roles together (e.g., engineering, data-science, business)
 
 #### 2. Prompt Structure
@@ -154,7 +154,7 @@ Each prompt should include these sections in order:
 
 1. Clone the repository
 2. Run `make environment-create`
-3. Add new prompts to `prompts/` directory
+3. Add new prompts to `ai_assistant_roles/roles/` directory
 4. Test loading with Python API
 5. Use `make validate-branch` before commits
 
