@@ -2,7 +2,7 @@
 
 GREEN_LINE=@echo "\033[0;32m--------------------------------------------------\033[0m"
 
-SOURCE_DIR = ai_base_template/
+SOURCE_DIR = ai_assistant_roles/
 TEST_DIR = tests/
 PROJECT_VERSION := $(shell awk '/^\[project\]/ {flag=1; next} /^\[/{flag=0} flag && /^version/ {gsub(/"/, "", $$2); print $$2}' pyproject.toml)
 PYTHON_VERSION := 3.12
@@ -91,7 +91,7 @@ integration-test: ## Run integration tests with pytest
 all-test: ## Run all tests with coverage report
 	@echo "Running ALL tests with pytest..."
 	uv run python -m pytest -m "not integration" -vv -s $(TEST_DIR) \
-		--cov=ai_base_template \
+		--cov=ai_assistant_roles \
 		--cov-config=pyproject.toml \
 		--cov-fail-under=80 \
 		--cov-report=term-missing

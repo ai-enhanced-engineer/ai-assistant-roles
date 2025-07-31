@@ -1,4 +1,4 @@
-# AI Base Template
+# AI Assistant Roles
 
 A minimal Python template for AI/ML projects with modern tooling, designed to help you start projects faster with best practices built-in.
 
@@ -43,7 +43,7 @@ cd my-ai-project
 make environment-create
 ```
 
-3. Start coding! Your code goes in `ai_base_template/`
+3. Start coding! Your code goes in `ai_assistant_roles/`
 
 4. Run tests to make sure everything works:
 ```bash
@@ -53,8 +53,8 @@ make unit-test
 ## Project Structure
 
 ```
-ai-base-template/
-├── ai_base_template/      # Your Python package
+ai-assistant-roles/
+├── ai_assistant_roles/      # Your Python package
 │   ├── __init__.py       # Package initialization
 │   └── main.py           # Example module
 ├── tests/                # Test files
@@ -92,7 +92,7 @@ make all-test          # Run all tests with coverage
 
 ### Adding Code
 
-1. Add your modules to `ai_base_template/`
+1. Add your modules to `ai_assistant_roles/`
 2. Write corresponding tests in `tests/`
 3. Use type hints for better code quality
 4. Run `make validate-branch` before committing
@@ -154,7 +154,7 @@ make integration-test
 
 ## Starting Your Project
 
-1. **Rename the package**: Change `ai_base_template` to your project name
+1. **Rename the package**: Change `ai_assistant_roles` to your project name
 2. **Update pyproject.toml**: Set your project name, version, and description
 3. **Clean up examples**: Remove the example code in `main.py`
 4. **Start building**: Add your own modules and logic

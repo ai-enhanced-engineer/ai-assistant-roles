@@ -1,12 +1,12 @@
-# AI Base Template - Development Guide
+# AI Assistant Roles - Development Guide
 
 A Python template for ML/AI projects with FastAPI, designed for rapid prototyping and clean architecture.
 
 ## Project Structure
 
 ```
-ai-base-template/
-├── ai_base_template/      # Main application code
+ai-assistant-roles/
+├── ai_assistant_roles/      # Main application code
 │   ├── __init__.py
 │   └── main.py           # FastAPI entry point
 ├── tests/                # Test suite
@@ -89,7 +89,7 @@ make all-test           # Run all tests with coverage
 
 1. Clone the template
 2. Run `make environment-create`
-3. Start coding in `ai_base_template/`
+3. Start coding in `ai_assistant_roles/`
 4. Add tests in `tests/`
 5. Use `make validate-branch` before commits
 
