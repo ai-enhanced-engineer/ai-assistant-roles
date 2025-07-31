@@ -1,136 +1,97 @@
 # AI Assistant Roles
 
-A simple system for storing and managing AI assistant personality prompts. Each prompt defines a specific role with expertise, communication style, and guidelines.
+A comprehensive collection of AI assistant personality prompts organized by domain. Each prompt defines a specific role with expertise, communication style, and guidelines for consistent AI behavior.
 
 ## What is this?
 
 This project provides:
-- A collection of AI assistant prompts for different roles
-- Simple Python API for loading prompts
+- **23 carefully crafted AI assistant prompts** across multiple domains
+- Simple Python API for programmatic access
 - Git-based version control for prompt evolution
 - Easy-to-edit Markdown format
+- Semantic versioning support
+
+## 📚 Available Roles
+
+### Engineering (10 roles)
+- `software-engineer` - Full-stack software development expertise
+- `backend-engineer` - Backend systems and API development
+- `frontend-engineer` - UI/UX and frontend technologies
+- `ai-engineer` - AI/ML engineering and implementation
+- `ai-product-engineer` - AI-powered product development
+- `software-architect` - System design and architecture
+- `systems-architect` - Infrastructure and distributed systems
+- `devops-engineer` - CI/CD, automation, and operations
+- `qa-tester` - Quality assurance and testing
+- `code-reviewer` - Code review and best practices
+
+### Research (6 roles)
+- `research-engineer` - Applied research and implementation
+- `deep-learning-researcher` - Neural networks and deep learning
+- `language-model-expert` - LLMs and NLP expertise
+- `multimodal-researcher` - Vision, audio, and multimodal AI
+- `novel-techniques-researcher` - Cutting-edge AI research
+- `statistical-ml-researcher` - Statistical machine learning
+
+### Data (2 roles)
+- `data-scientist` - Data analysis and machine learning
+- `data-analyst` - Data exploration and insights
+
+### Business (1 role)
+- `product-manager` - Product strategy and management
+
+### Design (1 role)
+- `ux-designer` - User experience and interface design
+
+### Writing (3 roles)
+- `writing-assistant` - General writing support
+- `linkedin-writer` - Professional LinkedIn content
+- `introspection-writer` - Reflective and analytical writing
 
 ## Quick Start
 
-### 1. Browse Available Roles
+1. **Browse the roles** in the `ai_assistant_roles/roles/` directory
+2. **Copy the content** of any role you need  
+3. **Paste it** as a system prompt in your AI assistant (ChatGPT, Claude, etc.)
 
-Check the `roles/` directory to see available roles:
-- `backend-engineer.md` - Backend development expertise
-- `data-scientist.md` - Data science and ML focus
-- `code-reviewer.md` - Code review specialist
-
-### 2. Use in Python
-
-```python
-from ai_assistant_roles.prompts import load_prompt, list_prompts
-
-# List available roles
-roles = list_prompts()
-print(roles)  # ['backend-engineer', 'code-reviewer', 'data-scientist']
-
-# Load a specific prompt
-prompt = load_prompt('backend-engineer')
-print(prompt)
-```
-
-### 3. Use Directly
-
-Simply read the markdown files in `roles/` directory and copy the content to your AI assistant.
+That's it! The roles are organized by domain (engineering, research, data, etc.) for easy navigation.
 
 ## Project Structure
 
 ```
 ai-assistant-roles/
-├── roles/                  # Role definitions
-│   ├── backend-engineer.md
-│   ├── data-scientist.md
-│   └── code-reviewer.md
 ├── ai_assistant_roles/      # Python package
 │   ├── __init__.py
-│   └── prompts.py          # Role loading utilities
-└── tests/                  # Test suite
+│   ├── prompts.py          # Role loading utilities
+│   └── roles/              # All role definitions
+│       ├── business/       # Business-focused roles
+│       ├── data/          # Data science roles
+│       ├── design/        # Design roles
+│       ├── engineering/   # Software engineering roles
+│       ├── research/      # Research roles
+│       └── writing/       # Writing roles
+├── tests/                  # Test suite
+├── pyproject.toml         # Project configuration
+├── Makefile              # Development automation
+└── CLAUDE.md             # Development guidelines
 ```
-
-## Adding New Roles
-
-1. Create a new `.md` file in the `roles/` directory
-2. Name it using kebab-case (e.g., `frontend-engineer.md`)
-3. Follow the existing format:
-   ```markdown
-   # Role Name
-   
-   Brief description of the role and expertise.
-   
-   ## Core Expertise
-   - List key areas of knowledge
-   
-   ## Communication Style
-   - How to communicate
-   
-   ## When Providing Solutions
-   - Guidelines for responses
-   ```
-
-## Versioning
-
-This project uses Git tags for versioning:
-- View current version: `git describe --tags`
-- Checkout specific version: `git checkout v1.0.0`
-- Create new version: `git tag -a v1.0.1 -m "Add new roles"`
 
 ## Python API
 
-### Functions
+A simple Python API is available for programmatic access:
+- `load_prompt(role)` - Load a prompt by role name
+- `list_prompts()` - List all available roles
+- `prompt_exists(role)` - Check if a role exists
 
-- `load_prompt(role: str) -> str`: Load a prompt by role name
-- `list_prompts() -> list[str]`: List all available roles
-- `prompt_exists(role: str) -> bool`: Check if a role exists
+## Adding New Roles
 
-### Example Usage
-
-```python
-from ai_assistant_roles.prompts import load_prompt
-
-# Load and use with OpenAI
-import openai
-
-prompt = load_prompt('data-scientist')
-response = openai.ChatCompletion.create(
-    model="gpt-4",
-    messages=[
-        {"role": "system", "content": prompt},
-        {"role": "user", "content": "Help me analyze this dataset..."}
-    ]
-)
-```
-
-## Development
-
-### Setup Environment
-
-```bash
-# Create virtual environment
-make environment-create
-
-# Run tests
-make unit-test
-
-# Format and lint
-make format lint
-```
-
-### Running Tests
-
-```bash
-make test
-```
+See [CLAUDE.md](CLAUDE.md) for detailed guidelines on creating new role prompts.
 
 ## Contributing
 
-1. Add new roles to `roles/` directory
-2. Test loading with the Python API
-3. Update this README if needed
-4. Create a pull request
+1. Fork the repository
+2. Add new roles following the guidelines in [CLAUDE.md](CLAUDE.md)
+3. Submit a pull request
 
 ## License
 
