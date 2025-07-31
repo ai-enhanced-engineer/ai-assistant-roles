@@ -181,7 +181,6 @@ $RECYCLE.BIN/
 *.feather
 *.parquet
 models/
-data/
 *.model
 *.joblib
 
