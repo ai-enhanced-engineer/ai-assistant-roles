@@ -13,7 +13,7 @@ This project provides:
 
 ## 📚 Available Roles
 
-### Engineering (9 roles)
+### Engineering (10 roles)
 - `software-engineer` - Full-stack software development expertise
 - `backend-engineer` - Backend systems and API development
 - `frontend-engineer` - UI/UX and frontend technologies
