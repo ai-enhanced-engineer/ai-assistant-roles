@@ -1,21 +1,24 @@
 # AI Assistant Roles - Development Guide
 
-A Python template for ML/AI projects with FastAPI, designed for rapid prototyping and clean architecture.
+A system for storing and managing AI assistant personality prompts. Each prompt defines a specific role with expertise, communication style, and guidelines for consistent AI behavior.
 
 ## Project Structure
 
 ```
 ai-assistant-roles/
-├── ai_assistant_roles/      # Main application code
+├── prompts/              # AI role prompt definitions
+│   ├── engineering/      # Engineering-focused roles
+│   │   ├── software-engineer.md
+│   │   ├── backend-engineer.md
+│   │   ├── software-architect.md
+│   │   └── systems-architect.md
+│   └── other-domains/    # Other domain roles
+├── ai_assistant_roles/   # Python package
 │   ├── __init__.py
-│   └── main.py           # FastAPI entry point
-├── tests/                # Test suite
-│   └── test_main.py
-├── research/             # Notebooks and experiments
-│   └── EDA.ipynb        # Exploratory data analysis
-├── testing/              # API testing utilities
-├── Makefile             # Development automation
-└── pyproject.toml       # Project config & dependencies
+│   └── main.py          # Prompt loading utilities
+├── tests/               # Test suite
+├── Makefile            # Development automation
+└── pyproject.toml      # Project config & dependencies
 ```
 
 ## Quick Start
@@ -85,12 +88,74 @@ make all-test           # Run all tests with coverage
 - No hardcoded secrets
 - Test coverage > 80%
 
+## Creating New Role Prompts
+
+### Guidelines for Writing Role Prompts
+
+When creating a new AI assistant role prompt, follow this consistent structure:
+
+#### 1. File Naming
+- Use kebab-case for file names (e.g., `software-architect.md`)
+- Place in appropriate subdirectory under `prompts/`
+- Group related roles together (e.g., engineering, data-science, business)
+
+#### 2. Prompt Structure
+
+Each prompt should include these sections in order:
+
+```markdown
+# Role Name
+
+[Opening paragraph describing the role, experience level, and key characteristics]
+
+## Core Expertise
+- [List 6-8 key areas of expertise]
+- [Be specific about technologies and methodologies]
+- [Include both technical and strategic capabilities]
+
+## Communication Style
+- [Define how the assistant should communicate]
+- [Include tone, approach, and focus areas]
+- [Specify how to handle different audiences]
+
+## When Providing Solutions
+1. [Step-by-step approach the assistant should follow]
+2. [Usually 6-8 numbered steps]
+3. [Include analysis, implementation, and validation]
+
+## Key Principles
+- [Core principles that guide the role]
+- [Include best practices and philosophies]
+- [Balance idealism with pragmatism]
+
+## [Optional: Additional Section]
+- [Some roles may need an extra section]
+- [e.g., "Architectural Thinking" or "Testing Philosophy"]
+```
+
+#### 3. Writing Guidelines
+
+- **Opening Statement**: Include years of experience and define the role's primary focus
+- **Expertise Areas**: Be specific about technologies, tools, and methodologies
+- **Communication**: Define both technical depth and how to explain to different audiences
+- **Solution Approach**: Create a logical flow from understanding to implementation
+- **Principles**: Include both technical excellence and practical considerations
+- **Balance**: Ensure the role balances best practices with real-world constraints
+
+#### 4. Consistency Checks
+
+- Maintain consistent formatting across all prompts
+- Use similar section headers for easy navigation
+- Keep similar length and detail level
+- Ensure the role is distinct from existing ones
+- Test the prompt with sample queries
+
 ## Getting Started
 
-1. Clone the template
+1. Clone the repository
 2. Run `make environment-create`
-3. Start coding in `ai_assistant_roles/`
-4. Add tests in `tests/`
+3. Add new prompts to `prompts/` directory
+4. Test loading with Python API
 5. Use `make validate-branch` before commits
 
-This template provides a solid foundation for ML/AI projects with all the modern Python tooling pre-configured.
+This project helps maintain consistent, high-quality AI assistant personalities across different technical domains.

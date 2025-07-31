@@ -12,9 +12,9 @@ This project provides:
 
 ## Quick Start
 
-### 1. Browse Available Prompts
+### 1. Browse Available Roles
 
-Check the `prompts/` directory to see available roles:
+Check the `roles/` directory to see available roles:
 - `backend-engineer.md` - Backend development expertise
 - `data-scientist.md` - Data science and ML focus
 - `code-reviewer.md` - Code review specialist
@@ -35,25 +35,25 @@ print(prompt)
 
 ### 3. Use Directly
 
-Simply read the markdown files in `prompts/` directory and copy the content to your AI assistant.
+Simply read the markdown files in `roles/` directory and copy the content to your AI assistant.
 
 ## Project Structure
 
 ```
 ai-assistant-roles/
-├── prompts/                 # Prompt storage
+├── roles/                  # Role definitions
 │   ├── backend-engineer.md
 │   ├── data-scientist.md
 │   └── code-reviewer.md
 ├── ai_assistant_roles/      # Python package
 │   ├── __init__.py
-│   └── prompts.py          # Prompt loading utilities
+│   └── prompts.py          # Role loading utilities
 └── tests/                  # Test suite
 ```
 
-## Adding New Prompts
+## Adding New Roles
 
-1. Create a new `.md` file in the `prompts/` directory
+1. Create a new `.md` file in the `roles/` directory
 2. Name it using kebab-case (e.g., `frontend-engineer.md`)
 3. Follow the existing format:
    ```markdown
@@ -76,7 +76,7 @@ ai-assistant-roles/
 This project uses Git tags for versioning:
 - View current version: `git describe --tags`
 - Checkout specific version: `git checkout v1.0.0`
-- Create new version: `git tag -a v1.0.1 -m "Add new prompts"`
+- Create new version: `git tag -a v1.0.1 -m "Add new roles"`
 
 ## Python API
 
@@ -127,7 +127,7 @@ make test
 
 ## Contributing
 
-1. Add new prompts to `prompts/` directory
+1. Add new roles to `roles/` directory
 2. Test loading with the Python API
 3. Update this README if needed
 4. Create a pull request
