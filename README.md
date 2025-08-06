@@ -95,4 +95,4 @@ See [CLAUDE.md](CLAUDE.md) for detailed guidelines on creating new role prompts.
 
 ## License
 
-[Your License Here]
+Apache License 2.0 - see [LICENSE](LICENSE) file for details.
