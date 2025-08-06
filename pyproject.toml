@@ -1,6 +1,6 @@
 [project]
 name = "ai-assistant-roles"
-version = "0.1.0"
+version = "0.2.0"
 description = "AI Assistant Roles - Python service with AI capabilities"
 authors = [{name="Leopoldo Garcia Vargas", email="lk13.dev@gmail.com"}]
 license = {text = "Apache-2.0"}
