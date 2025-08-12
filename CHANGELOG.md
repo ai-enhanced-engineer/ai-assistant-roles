@@ -2,6 +2,50 @@
 
 <!-- version list -->
 
+## v0.3.0 (2025-08-12)
+
+### Bug Fixes
+
+- Add Apache-2.0 license to pyproject.toml
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+- Address code review feedback
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+- Restore CHANGELOG.md from main branch
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+- Restore LICENSE file that was accidentally removed
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+### Documentation
+
+- Add hero image to README ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+- Address minor documentation enhancements
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+- Improve README presentation and focus on prompt library usage
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+- Improve README structure and focus on prompt library usage
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+### Features
+
+- Add hero image for README visualization
+  ([#6](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/6),
+  [`386ddde`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/386ddde41e1a15adce02fcbf44282d0ae639ae9d))
+
+
 ## v0.2.1 (2025-08-12)
 
 ### Bug Fixes

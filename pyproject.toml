@@ -1,6 +1,6 @@
 [project]
 name = "ai-assistant-roles"
-version = "0.2.1"
+version = "0.3.0"
 description = "Production-grade AI assistant role prompts for specialized workflows"
 authors = [{name="Leopoldo Garcia Vargas", email="lk13.dev@gmail.com"}]
 license = {text = "Apache-2.0"}
