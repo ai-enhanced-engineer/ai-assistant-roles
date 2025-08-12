@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.3.1 (2025-08-12)
+
+### Bug Fixes
+
+- Center and resize hero image to 50% width for optimal display
+  ([`ee1caf2`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/ee1caf2bc305b841ab08c7885fd4905d5ff9341d))
+
+
 ## v0.3.0 (2025-08-12)
 
 ### Bug Fixes
