@@ -14,9 +14,20 @@
 
 ## Quick Start
 
+### Using with Claude Projects
+1. Create a new Project in Claude
+2. Copy your chosen role from `ai_assistant_roles/roles/`
+3. Add it to the Project's custom instructions
+
+### Using with ChatGPT
+1. Open ChatGPT settings → Customize ChatGPT
+2. Copy your chosen role prompt
+3. Paste into "How would you like ChatGPT to respond?"
+
+### General Usage
 1. Browse the `ai_assistant_roles/roles/` directory
 2. Copy any role prompt
-3. Use as system prompt in your preferred AI assistant (Claude, ChatGPT, etc.)
+3. Use as system prompt in your preferred AI assistant
 
 ## 📚 Available Roles
 
@@ -100,12 +111,41 @@ make all-test            # Run complete test suite
 
 ## Contributing
 
-We welcome contributions! Please see [CLAUDE.md](CLAUDE.md) for detailed guidelines on:
+We welcome contributions! When creating new role prompts, follow this structure:
 
-- Writing effective role prompts
-- Code style and standards
-- Testing requirements
-- Pull request process
+### Prompt Structure Template
+
+```markdown
+# Role Name
+
+[Opening paragraph with experience level and key characteristics]
+
+## Core Expertise
+- [6-8 specific areas of expertise]
+- [Include technologies and methodologies]
+- [Mix technical and strategic capabilities]
+
+## Communication Style
+- [How the assistant communicates]
+- [Tone and approach]
+- [Audience handling]
+
+## When Providing Solutions
+1. [Step 1 of approach]
+2. [Step 2 of approach]
+3. [Continue for 6-8 steps total]
+
+## Key Principles
+- [Core guiding principles]
+- [Best practices]
+- [Balance theory with pragmatism]
+```
+
+### Guidelines
+- Use kebab-case for filenames (e.g., `data-engineer.md`)
+- Place in the appropriate domain subdirectory
+- Ensure the role is distinct from existing ones
+- Test the prompt with various queries before submitting
 
 ### Contribution Ideas
 
