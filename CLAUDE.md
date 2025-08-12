@@ -1,153 +1,96 @@
-# AI Assistant Roles - Development Guide
+# Instructions for Claude
 
-A system for storing and managing AI assistant personality prompts. Each prompt defines a specific role with expertise, communication style, and guidelines for consistent AI behavior.
+This file contains specific instructions for how you (Claude) should work with this AI Assistant Roles repository.
 
-## Project Structure
+## Project Overview
 
-```
-ai-assistant-roles/
-├── ai_assistant_roles/   # Python package
-│   ├── __init__.py
-│   ├── prompts.py       # Prompt loading utilities
-│   └── roles/           # AI role prompt definitions
-│       ├── business/    # Business-focused roles
-│       ├── data/        # Data science roles
-│       ├── design/      # Design roles
-│       ├── engineering/ # Software engineering roles
-│       ├── research/    # Research roles
-│       └── writing/     # Writing roles
-├── tests/               # Test suite
-├── Makefile            # Development automation
-└── pyproject.toml      # Project config & dependencies
-```
+This repository contains 23 AI assistant role prompts organized by domain (engineering, research, data, business, design, writing). These prompts are used to create specialized AI personas for different technical tasks.
 
-## Quick Start
+## When Users Ask About This Project
 
-### Setup
-```bash
-make environment-create   # Creates Python 3.12 env with uv
-make environment-sync     # Updates dependencies
-```
+- **Focus on the prompts themselves** - This is a collection of role definitions, not a Python package
+- **Direct users to browse** the `ai_assistant_roles/roles/` directory to find prompts
+- **Mention the article** at https://aienhancedengineer.substack.com/p/the-role-driven-ai-engineering-workflow for methodology details
+- **Keep explanations simple** - Users just need to copy prompts and use them
 
-### Development Commands
-```bash
-make format              # Auto-format with Ruff
-make lint                # Lint and auto-fix issues
-make type-check          # Type check with MyPy
-make validate-branch     # Run all checks before PR
-```
+## When Creating New Role Prompts
 
-### Testing
-```bash
-make unit-test           # Run unit tests
-make functional-test     # Run functional tests
-make all-test           # Run all tests with coverage
-```
-
-## Development Workflow
-
-1. **Write code** following Python conventions:
-   - Classes: `PascalCase`
-   - Functions/variables: `snake_case` 
-   - Constants: `UPPER_SNAKE_CASE`
-   - Max line length: 120 characters
-
-2. **Validate before committing**:
-   ```bash
-   make validate-branch     # Runs linting and tests
-   ```
-
-3. **Test thoroughly**:
-   - Unit tests: `@pytest.mark.unit`
-   - Functional tests: `@pytest.mark.functional`
-   - Integration tests: `@pytest.mark.integration`
-
-## Key Technologies
-
-- **FastAPI**: Modern Python web framework
-- **Pydantic**: Data validation using Python type annotations
-- **MyPy**: Static type checking
-- **Ruff**: Fast Python linter and formatter
-- **pytest**: Testing framework
-- **uv**: Fast Python package manager
-
-## Best Practices
-
-- Type hints on all functions
-- Pydantic models for data validation
-- Structured logging with loguru
-- Environment-based configuration
-- No hardcoded secrets
-- Test coverage > 80%
-
-## Creating New Role Prompts
-
-### Guidelines for Writing Role Prompts
-
-When creating a new AI assistant role prompt, follow this consistent structure:
-
-#### 1. File Naming
-- Use kebab-case for file names (e.g., `software-architect.md`)
-- Place in appropriate subdirectory under `ai_assistant_roles/roles/`
-- Group related roles together (e.g., engineering, data, business, design, research, writing)
-
-#### 2. Prompt Structure
-
-Each prompt should include these sections in order:
+If a user asks you to create a new role prompt, follow this exact structure:
 
 ```markdown
 # Role Name
 
-[Opening paragraph describing the role, experience level, and key characteristics]
+[Opening paragraph with experience level and key characteristics]
 
 ## Core Expertise
-- [List 6-8 key areas of expertise]
-- [Be specific about technologies and methodologies]
-- [Include both technical and strategic capabilities]
+- [6-8 specific areas of expertise]
+- [Include technologies and methodologies]
+- [Mix technical and strategic capabilities]
 
 ## Communication Style
-- [Define how the assistant should communicate]
-- [Include tone, approach, and focus areas]
-- [Specify how to handle different audiences]
+- [How the assistant communicates]
+- [Tone and approach]
+- [Audience handling]
 
 ## When Providing Solutions
-1. [Step-by-step approach the assistant should follow]
-2. [Usually 6-8 numbered steps]
-3. [Include analysis, implementation, and validation]
+1. [Step 1 of approach]
+2. [Step 2 of approach]
+3. [Continue for 6-8 steps total]
 
 ## Key Principles
-- [Core principles that guide the role]
-- [Include best practices and philosophies]
-- [Balance idealism with pragmatism]
-
-## [Optional: Additional Section]
-- [Some roles may need an extra section]
-- [e.g., "Architectural Thinking" or "Testing Philosophy"]
+- [Core guiding principles]
+- [Best practices]
+- [Balance theory with pragmatism]
 ```
 
-#### 3. Writing Guidelines
+### Important Guidelines When Writing Prompts
 
-- **Opening Statement**: Include years of experience and define the role's primary focus
-- **Expertise Areas**: Be specific about technologies, tools, and methodologies
-- **Communication**: Define both technical depth and how to explain to different audiences
-- **Solution Approach**: Create a logical flow from understanding to implementation
-- **Principles**: Include both technical excellence and practical considerations
-- **Balance**: Ensure the role balances best practices with real-world constraints
+1. **Be specific** - Name actual technologies, frameworks, and tools
+2. **Stay consistent** - Match the format of existing prompts in the repository
+3. **Test mentally** - Consider if the prompt would produce coherent, focused responses
+4. **Avoid overlap** - Ensure new roles are distinct from existing ones
+5. **Use kebab-case** for filenames (e.g., `data-engineer.md`)
+6. **Place in correct directory** based on domain
 
-#### 4. Consistency Checks
+## When Users Want to Contribute
 
-- Maintain consistent formatting across all prompts
-- Use similar section headers for easy navigation
-- Keep similar length and detail level
-- Ensure the role is distinct from existing ones
-- Test the prompt with sample queries
+Tell them to:
+1. Fork the repository
+2. Add their prompt to the appropriate `roles/` subdirectory
+3. Follow the existing format exactly
+4. Submit a pull request
 
-## Getting Started
+## Development Commands You Should Know
 
-1. Clone the repository
-2. Run `make environment-create`
-3. Add new prompts to `ai_assistant_roles/roles/` directory
-4. Test loading with Python API
-5. Use `make validate-branch` before commits
+When users ask about development:
+- `make environment-create` - Sets up the development environment
+- `make validate-branch` - Runs all checks before committing
+- `make all-test` - Runs the test suite
 
-This project helps maintain consistent, high-quality AI assistant personalities across different technical domains.
+These are mainly for maintaining the repository structure, not for using the prompts.
+
+## Integration Patterns
+
+If users ask about programmatic usage, direct them to `ai_assistant_roles/roles/INTEGRATION.md` which contains code examples for:
+- OpenAI API
+- Claude API  
+- LangChain
+- LlamaIndex
+
+## Key Points to Remember
+
+1. **This is primarily a prompt library** - Not a complex software package
+2. **Users mainly copy and paste** - That's the primary use case
+3. **The article explains the methodology** - Don't duplicate it in the README
+4. **Keep it simple** - Most users just want to find and use a prompt
+5. **Quality over quantity** - Better to have well-crafted prompts than many mediocre ones
+
+## Do NOT
+
+- Create Python installation instructions (there's no package to install)
+- Overcomplicate the usage (it's just copying text files)
+- Add unnecessary technical details to the README
+- Create prompts without following the exact structure above
+- Suggest complex integrations when simple copy-paste works
+
+Remember: This repository is about making AI assistant roles easily accessible and usable. Keep everything focused on that goal.
