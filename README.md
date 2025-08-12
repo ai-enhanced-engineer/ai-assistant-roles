@@ -64,7 +64,6 @@
 ### Writing (3 roles)
 - `writing-assistant` - General writing support
 - `linkedin-writer` - Professional LinkedIn content
-- `introspection-writer` - Reflective and analytical writing
 
 
 ## Project Structure
