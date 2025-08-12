@@ -2,6 +2,37 @@
 
 <!-- version list -->
 
+## v0.2.1 (2025-08-12)
+
+### Bug Fixes
+
+- Add Apache-2.0 license to pyproject.toml
+  ([#5](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/5),
+  [`2d2f40d`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/2d2f40d05f394032427315e7ab69f260e4a0ee19))
+
+- Address code review feedback
+  ([#5](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/5),
+  [`2d2f40d`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/2d2f40d05f394032427315e7ab69f260e4a0ee19))
+
+- Restore CHANGELOG.md from main branch
+  ([#5](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/5),
+  [`2d2f40d`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/2d2f40d05f394032427315e7ab69f260e4a0ee19))
+
+- Restore LICENSE file that was accidentally removed
+  ([#5](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/5),
+  [`2d2f40d`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/2d2f40d05f394032427315e7ab69f260e4a0ee19))
+
+### Documentation
+
+- Address minor documentation enhancements
+  ([#5](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/5),
+  [`2d2f40d`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/2d2f40d05f394032427315e7ab69f260e4a0ee19))
+
+- Improve README structure and focus on prompt library usage
+  ([#5](https://github.com/ai-enhanced-engineer/ai-assistant-roles/pull/5),
+  [`2d2f40d`](https://github.com/ai-enhanced-engineer/ai-assistant-roles/commit/2d2f40d05f394032427315e7ab69f260e4a0ee19))
+
+
 ## v0.2.0 (2025-08-06)
 
 ### Features
