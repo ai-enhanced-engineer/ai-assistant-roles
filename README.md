@@ -2,7 +2,9 @@
 
 **Production-Grade AI Assistant Prompts** - Role definitions for building structured AI engineering workflows. Transform generic AI interactions into specialized, domain-expert consultations.
 
-![AI Assistant Roles - Transform AI interactions into specialized consultations](assets/images/ai-assistant-roles.png)
+<div align="center">
+  <img src="assets/images/ai-assistant-roles.png" alt="AI Assistant Roles - Transform AI interactions into specialized consultations" width="50%">
+</div>
 
 📚 **Learn the methodology: [The Role-Driven AI Engineering Workflow](https://aienhancedengineer.substack.com/p/the-role-driven-ai-engineering-workflow)** - Deep dive into building your AI engineering team.
 ## What This Repository Provides
