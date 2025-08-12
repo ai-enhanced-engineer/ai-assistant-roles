@@ -1,15 +1,22 @@
 # AI Assistant Roles
 
-A comprehensive collection of AI assistant personality prompts organized by domain. Each prompt defines a specific role with expertise, communication style, and guidelines for consistent AI behavior.
+**Production-Grade AI Assistant Prompts** - Role definitions for building structured AI engineering workflows. Transform generic AI interactions into specialized, domain-expert consultations.
 
-## What is this?
+📚 **Learn the methodology: [The Role-Driven AI Engineering Workflow](https://aienhancedengineer.substack.com/p/the-role-driven-ai-engineering-workflow)** - Deep dive into building your AI engineering team.
 
-This project provides:
-- **23 carefully crafted AI assistant prompts** across multiple domains
-- Simple Python API for programmatic access
-- Git-based version control for prompt evolution
-- Easy-to-edit Markdown format
-- Semantic versioning support
+## What This Repository Provides
+
+- **23 specialized role prompts** across 6 professional domains
+- **Structured organization** by domain expertise
+- **Version-controlled** prompt evolution
+- **Ready-to-use** with Claude Projects, ChatGPT, or any LLM
+- **Production-tested** in real environments
+
+## Quick Start
+
+1. Browse the `ai_assistant_roles/roles/` directory
+2. Copy any role prompt
+3. Use as system prompt in your preferred AI assistant (Claude, ChatGPT, etc.)
 
 ## 📚 Available Roles
 
@@ -48,51 +55,75 @@ This project provides:
 - `linkedin-writer` - Professional LinkedIn content
 - `introspection-writer` - Reflective and analytical writing
 
-## Quick Start
-
-1. **Browse the roles** in the `ai_assistant_roles/roles/` directory
-2. **Copy the content** of any role you need  
-3. **Paste it** as a system prompt in your AI assistant (ChatGPT, Claude, etc.)
-
-That's it! The roles are organized by domain (engineering, research, data, etc.) for easy navigation.
 
 ## Project Structure
 
 ```
 ai-assistant-roles/
-├── ai_assistant_roles/      # Python package
-│   ├── __init__.py
-│   ├── prompts.py          # Role loading utilities
-│   └── roles/              # All role definitions
+├── ai_assistant_roles/      # Main directory
+│   ├── __init__.py         
+│   ├── prompts.py          # Prompt utilities
+│   └── roles/              # Role definitions by domain
 │       ├── business/       # Business-focused roles
 │       ├── data/          # Data science roles
 │       ├── design/        # Design roles
 │       ├── engineering/   # Software engineering roles
 │       ├── research/      # Research roles
-│       └── writing/       # Writing roles
+│       ├── writing/       # Writing roles
+│       └── INTEGRATION.md # Integration patterns guide
 ├── tests/                  # Test suite
-├── pyproject.toml         # Project configuration
 ├── Makefile              # Development automation
+├── pyproject.toml        # Configuration
 └── CLAUDE.md             # Development guidelines
 ```
 
-## Python API
+## Development
 
-A simple Python API is available for programmatic access:
-- `load_prompt(role)` - Load a prompt by role name
-- `list_prompts()` - List all available roles
-- `prompt_exists(role)` - Check if a role exists
+### Adding New Roles
 
-## Adding New Roles
+1. Create a new markdown file in the appropriate `roles/` subdirectory
+2. Follow the existing prompt structure:
+   - Role description and expertise
+   - Communication style
+   - Solution approach
+   - Key principles
+3. Test the prompt with various queries
+4. Submit a pull request
 
-See [CLAUDE.md](CLAUDE.md) for detailed guidelines on creating new role prompts.
+### Development Commands
+
+```bash
+make environment-create   # Create Python environment
+make validate-branch      # Run all checks before committing
+make all-test            # Run complete test suite
+```
 
 ## Contributing
 
-1. Fork the repository
-2. Add new roles following the guidelines in [CLAUDE.md](CLAUDE.md)
-3. Submit a pull request
+We welcome contributions! Please see [CLAUDE.md](CLAUDE.md) for detailed guidelines on:
+
+- Writing effective role prompts
+- Code style and standards
+- Testing requirements
+- Pull request process
+
+### Contribution Ideas
+
+- New specialized roles for emerging domains
+- Improvements to existing prompts based on real-world usage
+- Integration examples with different frameworks
+- Documentation improvements
+
+## Related Resources
+
+- [The Role-Driven AI Engineering Workflow](https://aienhancedengineer.substack.com/p/the-role-driven-ai-engineering-workflow) - Complete methodology
+- [AI Enhanced Engineer Newsletter](https://aienhancedengineer.substack.com/) - AI engineering insights
+- [FM App Toolkit](https://github.com/ai-enhanced-engineer/fm-app-toolkit) - Foundation model application patterns
 
 ## License
 
-[Your License Here]
+Apache License 2.0 - See [LICENSE](LICENSE) file for details.
+
+---
+
+🚀 **Ready to build your AI engineering team?** Transform your AI interactions into structured, professional consultations.
